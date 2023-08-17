@@ -2,6 +2,8 @@ package house591
 
 import (
 	"fmt"
+	"log"
+	"net/url"
 	"strings"
 
 	"github.com/gocolly/colly"
@@ -38,6 +40,10 @@ func NewCrawler(collector *colly.Collector, homePage string, searchingUrl string
 	}, nil
 }
 
+func (c *Crawler) GetCsrfToken() string {
+	return c.csrfToken
+}
+
 func (c *Crawler) FetchCsrfToken() (string, error) {
 	c.colly.OnRequest(func(r *colly.Request) {
 		fmt.Println("Visit URL:", r.URL)
@@ -60,6 +66,11 @@ func (c *Crawler) FetchCsrfToken() (string, error) {
 	return c.csrfToken, nil
 }
 
-func (c *Crawler) GetCsrfToken() string {
-	return c.csrfToken
+func (c *Crawler) FetchHouses(query string) error {
+	searchingUrl, err := url.Parse(c.searchingUrl)
+	if err != nil {
+		log.Fatalln("Invalid searching url:", err)
+		return err
+	}
+
 }
