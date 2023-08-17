@@ -1,23 +1,23 @@
 package main
 
 import (
+	"log"
+	linebotClient "renting_house/internal/linebot"
+
 	"github.com/joho/godotenv"
 	"github.com/line/line-bot-sdk-go/v7/linebot"
-	"log"
-	lineclient "renting_house/internal/linebot"
 )
 
 func main() {
 	err := godotenv.Load()
 	if err != nil {
-		panic("Error loading .env file")
+		log.Fatalln("Error loading .env file:", err)
 	}
 
-	bot, err := lineclient.Init()
-
+	bot, err := linebotClient.Init()
 	if err != nil {
-		log.Fatalln(err)
+		log.Fatalln("Initial linebot client error:", err)
 	}
 
-	bot.PushMessage("", linebot.NewTextMessage("Hi")).Do()
+	bot.BroadcastMessage(linebot.NewTextMessage("Hi")).Do()
 }
