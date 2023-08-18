@@ -1,0 +1,243 @@
+{
+    "status": 1,
+    "data": {
+        "topData": [
+            {
+                "title": "\ud83c\udf1f\u7368\u6d17\u66ec\ud83c\udf1f\u7cfb\u7d71\u6ac3\u6536\u7d0d\u2728\u5c08\u4eba\u7ba1\u7406\u2728",
+                "type": 1,
+                "post_id": 14842358,
+                "price": "11,500",
+                "price_unit": "\u5143\/\u6708",
+                "photo_list": [
+                    "https:\/\/img1.591.com.tw\/house\/2023\/04\/20\/168195553168053709.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/04\/20\/168195553107460806.jpg!510x400.jpg",
+                    "https:\/\/img1.591.com.tw\/house\/2023\/04\/20\/168195553125013701.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/04\/20\/168195552998814402.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/04\/20\/168195553448700805.jpg!510x400.jpg"
+                ],
+                "section_name": "\u897f\u5c6f\u5340",
+                "street_name": "\u5bcc\u5f37\u5df7",
+                "rent_tag": [
+                    {
+                        "id": 2,
+                        "name": "\u8fd1\u6377\u904b"
+                    }
+                ],
+                "area": "10",
+                "surrounding": {
+                    "type": "subway_station",
+                    "desc": "\u8ddd\u6377\u904b\u6587\u83ef\u9ad8\u4e2d\u7ad9",
+                    "distance": "425\u516c\u5c3a"
+                },
+                "community": "\u54c1\u5275\u5bcc\u5bcc1",
+                "room_str": "",
+                "is_video": 0,
+                "preferred": 1,
+                "kind": 2
+            },
+            {
+                "title": "\u53ef\u79df\u88dc\u5168\u68df\u5973\u5bbfwifi24H\u4fdd\u5168\u55ae\u4eba\u5957\u623f",
+                "type": 1,
+                "post_id": 14803110,
+                "price": "4,300",
+                "price_unit": "\u5143\/\u6708",
+                "photo_list": [
+                    "https:\/\/img2.591.com.tw\/house\/2023\/07\/20\/168984415488221203.jpg!510x400.jpg",
+                    "https:\/\/img1.591.com.tw\/house\/2023\/07\/20\/168984415435221506.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/07\/20\/168984415447813009.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/07\/20\/168984415453373309.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/07\/20\/168984415875130801.jpg!510x400.jpg"
+                ],
+                "section_name": "\u6c99\u9e7f\u5340",
+                "street_name": "\u6649\u6587\u8def",
+                "rent_tag": [
+                    {
+                        "id": 3,
+                        "name": "\u62ce\u5305\u5165\u4f4f"
+                    }
+                ],
+                "area": "4.5",
+                "surrounding": {
+                    "type": "bus_station",
+                    "desc": "\u8ddd\u5f18\u5149\u79d1\u6280\u5927\u5b78",
+                    "distance": "731\u516c\u5c3a"
+                },
+                "community": "\u5927\u5b78\u806f\u76df",
+                "room_str": "",
+                "is_video": 0,
+                "preferred": 1,
+                "kind": 2
+            }
+        ],
+        "biddings": [],
+        "data": [
+            {
+                "title": "\ud83d\udcaf\u79d2\u6bba\u7cbe\u7f8e\u5169\u623f\u53ef\u8c93\ud83d\udc31\u2757\ufe0f\u53f0\u6c34\u96fb\u2757\ufe0f",
+                "type": "1",
+                "post_id": 15092100,
+                "kind_name": "\u6574\u5c64\u4f4f\u5bb6",
+                "room_str": "2\u623f1\u5ef3",
+                "floor_str": "4F\/6F",
+                "community": "",
+                "price": "19,500",
+                "price_unit": "\u5143\/\u6708",
+                "photo_list": [
+                    "https:\/\/img1.591.com.tw\/house\/2023\/08\/17\/169228532221864404.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531845672501.jpg!510x400.jpg",
+                    "https:\/\/img1.591.com.tw\/house\/2023\/08\/17\/169228531186351909.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531501261900.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531229308400.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531164794301.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531781281308.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531860016806.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228532075101602.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531082771705.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531502251502.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/17\/169228531487794909.jpg!510x400.jpg"
+                ],
+                "section_name": "\u5317\u5340",
+                "street_name": "\u965d\u897f\u6771\u4e94\u8857",
+                "location": "\u5317\u5340-\u965d\u897f\u6771\u4e94\u885747\u5df7",
+                "rent_tag": [
+                    {
+                        "id": 17,
+                        "name": "\u5f71\u7247\u623f\u5c4b"
+                    },
+                    {
+                        "id": 2,
+                        "name": "\u8fd1\u6377\u904b"
+                    },
+                    {
+                        "id": 16,
+                        "name": "\u65b0\u4e0a\u67b6"
+                    },
+                    {
+                        "id": 3,
+                        "name": "\u62ce\u5305\u5165\u4f4f"
+                    },
+                    {
+                        "id": 4,
+                        "name": "\u8fd1\u5546\u5708"
+                    },
+                    {
+                        "id": 5,
+                        "name": "\u96a8\u6642\u53ef\u9077\u5165"
+                    }
+                ],
+                "area": "18",
+                "role_name": "\u4ef2\u4ecb",
+                "contact": "\u6c5f\u5148\u751f",
+                "refresh_time": "16\u5c0f\u6642\u5167",
+                "yesterday_hit": 3,
+                "is_vip": 0,
+                "is_combine": 2,
+                "hurry": 0,
+                "is_socail": 0,
+                "surrounding": {
+                    "type": "subway_station",
+                    "desc": "\u8ddd\u6377\u904b\u6587\u5fc3\u4e2d\u6e05\u7ad9",
+                    "distance": "439\u516c\u5c3a"
+                },
+                "discount_price_str": "",
+                "cases_id": 0,
+                "is_video": 1,
+                "preferred": 0,
+                "cid": 0
+            },
+            {
+                "title": "\u5168\u65b0\u4e00\u623f\ud83d\udd25\u6574\u68df\u5b8c\u5de5\u4e28\u79df\u5c4b\u88dc\u52a9\ud83d\udd25\u6c7d\u8eca\u4f4d",
+                "type": "1",
+                "post_id": 15068744,
+                "kind_name": "\u6574\u5c64\u4f4f\u5bb6",
+                "room_str": "1\u623f1\u5ef3",
+                "floor_str": "2F\/7F",
+                "community": "\u9673\u5e73\u8def\u6c34\u6e73\u96f7\u4e2d\u8857\u4e2d\u6e05\u8def\u5927\u9d6c\u8def",
+                "price": "15,999",
+                "price_unit": "\u5143\/\u6708",
+                "photo_list": [
+                    "https:\/\/img1.591.com.tw\/house\/2023\/08\/15\/169209436573326700.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/14\/169199057902437906.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/14\/169199057525026908.jpg!510x400.jpg",
+                    "https:\/\/img1.591.com.tw\/house\/2023\/08\/14\/169199057624678108.jpg!510x400.jpg",
+                    "https:\/\/img1.591.com.tw\/house\/2023\/08\/14\/169199057636718007.jpg!510x400.jpg",
+                    "https:\/\/img1.591.com.tw\/house\/2023\/08\/14\/169199057589159306.jpg!510x400.jpg",
+                    "https:\/\/img2.591.com.tw\/house\/2023\/08\/14\/169199057653046708.jpg!510x400.jpg"
+                ],
+                "section_name": "\u5317\u5c6f\u5340",
+                "street_name": "\u96f7\u4e2d\u8857",
+                "location": "\u5317\u5c6f\u5340-\u96f7\u4e2d\u8857",
+                "rent_tag": [
+                    {
+                        "id": 2,
+                        "name": "\u8fd1\u6377\u904b"
+                    },
+                    {
+                        "id": 16,
+                        "name": "\u65b0\u4e0a\u67b6"
+                    },
+                    {
+                        "id": 3,
+                        "name": "\u62ce\u5305\u5165\u4f4f"
+                    },
+                    {
+                        "id": 4,
+                        "name": "\u8fd1\u5546\u5708"
+                    },
+                    {
+                        "id": 10,
+                        "name": "\u6709\u96fb\u68af"
+                    },
+                    {
+                        "id": 5,
+                        "name": "\u96a8\u6642\u53ef\u9077\u5165"
+                    }
+                ],
+                "area": "18.9",
+                "role_name": "\u4ef2\u4ecb",
+                "contact": "\u6797\u5148\u751f",
+                "refresh_time": "41\u5206\u9418\u5167",
+                "yesterday_hit": 12,
+                "is_vip": 0,
+                "is_combine": 2,
+                "hurry": 0,
+                "is_socail": 0,
+                "surrounding": {
+                    "type": "bus_station",
+                    "desc": "\u8ddd\u6c34\u6e73\u7ad9(\u5927\u5fb7\u570b\u4e2d)",
+                    "distance": "45\u516c\u5c3a"
+                },
+                "discount_price_str": "",
+                "cases_id": "",
+                "is_video": 0,
+                "preferred": 0,
+                "cid": 0
+            }
+        ],
+        "page": "<a class=\"pagePrev first\"><span>\u4e0a\u4e00\u9801<\/span><\/a><span class=\"pageCurrent\">1<\/span><a class=\"pageNum-form\" href=\"javascript:;\"  data-first=\"30\" data-total=\"17125\" >2<\/a><a class=\"pageNum-form\" href=\"javascript:;\"  data-first=\"60\" data-total=\"17125\" >3<\/a><a class=\"pageNum-form\" href=\"javascript:;\"  data-first=\"90\" data-total=\"17125\" >4<\/a><a class=\"pageNum-form\" href=\"javascript:;\"  data-first=\"120\" data-total=\"17125\" >5<\/a><a class=\"pageNum-form\" href=\"javascript:;\"  data-first=\"150\" data-total=\"17125\" >6<\/a><span class=\"pageBreak\">...<\/span><a class=\"pageNum-form\" href=\"javascript:;\"  data-first=\"17100\" data-total=\"17125\" >571<\/a><a href=\"javascript:;\" data-first=\"30\" data-total=\"17125\"  class=\"pageNext\"><span>\u4e0b\u4e00\u9801<\/span><\/a><span class=\"TotalRecord\">&nbsp;&nbsp;\u5171 <span class=\"R\">17125 <\/span>\u7b46<\/span>"
+    },
+    "records": "17,125",
+    "is_recom": 0,
+    "deal_recom": [],
+    "online_social_user": 0,
+    "bluekai_data": {
+        "region_id": "8",
+        "section_id": "",
+        "sale_price": 0,
+        "rental_price": 0,
+        "unit_price_per_ping": "",
+        "room": "",
+        "shape": "",
+        "mrt_city": "",
+        "mrt_line": "",
+        "tag": 0,
+        "type": "rent",
+        "kind": "",
+        "page": "rent_list"
+    },
+    "recommend": [],
+    "seo": {
+        "title": "\u53f0\u4e2d\u5e02\u79df\u5c4b | \u623f\u5c4b\u51fa\u79df - 591\u79df\u5c4b\u7db2",
+        "keywords": "\u53f0\u4e2d\u5e02\u79df\u5c4b,\u53f0\u4e2d\u5e02\u79df\u5c4b\u7db2,\u53f0\u4e2d\u5e02\u623f\u5c4b\u51fa\u79df",
+        "description": "591\u79df\u5c4b\u7db2\uff0c\u51fa\u79df\u5c31\u662f\u5feb\uff01\u70ba\u60a8\u63d0\u4f9b\u53f0\u4e2d\u5e02\u79df\u5c4b\u8cc7\u8a0a\uff0c\u6bcf\u65e5\u5be6\u6642\u66f4\u65b0\uff0c\u4eba\u5de5\u5be9\u6838\u3002\u53f0\u4e2d\u5e02\u79df\u623f\u5b50\u3001\u520a\u767b\u79df\u5c4b\u8cc7\u8a0a\uff0c\u5c31\u4e0a591\uff01"
+    }
+}
