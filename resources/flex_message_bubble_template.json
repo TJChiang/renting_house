@@ -1,129 +1,129 @@
 {
-    "type": "bubble",
-    "header": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "box",
-          "layout": "horizontal",
-          "contents": [
-            {
-              "type": "image",
-              "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip4.jpg",
-              "size": "full",
-              "aspectMode": "cover",
-              "aspectRatio": "150:196",
-              "gravity": "center",
-              "flex": 1
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "image",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip5.jpg",
-                  "size": "full",
-                  "aspectMode": "cover",
-                  "aspectRatio": "150:98",
-                  "gravity": "center"
-                },
-                {
-                  "type": "image",
-                  "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip6.jpg",
-                  "size": "full",
-                  "aspectMode": "cover",
-                  "aspectRatio": "150:98",
-                  "gravity": "center"
+  "type": "bubble",
+  "header": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "horizontal",
+        "contents": [
+          {
+            "type": "image",
+            "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip4.jpg",
+            "size": "full",
+            "aspectMode": "cover",
+            "aspectRatio": "150:196",
+            "gravity": "center",
+            "flex": 1
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "image",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip5.jpg",
+                "size": "full",
+                "aspectMode": "cover",
+                "aspectRatio": "150:98",
+                "gravity": "center"
+              },
+              {
+                "type": "image",
+                "url": "https://scdn.line-apps.com/n/channel_devcenter/img/flexsnapshot/clip/clip6.jpg",
+                "size": "full",
+                "aspectMode": "cover",
+                "aspectRatio": "150:98",
+                "gravity": "center"
+              }
+            ],
+            "flex": 1
+          }
+        ]
+      }
+    ],
+    "paddingAll": "0px"
+  },
+  "body": {
+    "type": "box",
+    "layout": "vertical",
+    "contents": [
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "contents": [],
+                "size": "xl",
+                "wrap": true,
+                "text": "超秒殺✨可租屋補助❗樓中樓小豪宅✨管理員",
+                "color": "#000000",
+                "weight": "bold"
+              }
+            ],
+            "spacing": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "整層住家 | 1房1廳 | 17.9坪 | 5F/9F",
+                "color": "#090909",
+                "size": "sm"
+              },
+              {
+                "type": "text",
+                "text": "西屯區-漢口路二段",
+                "color": "#090909",
+                "size": "sm"
+              }
+            ],
+            "spacing": "sm"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "NTD. 17900",
+                "color": "#E60012",
+                "size": "xl",
+                "weight": "bold"
+              }
+            ],
+            "spacing": "sm",
+            "margin": "md"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "button",
+                "action": {
+                  "type": "uri",
+                  "label": "開啟",
+                  "uri": "http://linecorp.com/"
                 }
-              ],
-              "flex": 1
-            }
-          ]
-        }
-      ],
-      "paddingAll": "0px"
-    },
-    "body": {
-      "type": "box",
-      "layout": "vertical",
-      "contents": [
-        {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "contents": [],
-                  "size": "xl",
-                  "wrap": true,
-                  "text": "超秒殺✨可租屋補助❗樓中樓小豪宅✨管理員",
-                  "color": "#000000",
-                  "weight": "bold"
-                }
-              ],
-              "spacing": "sm"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "整層住家 | 1房1廳 | 17.9坪 | 5F/9F",
-                  "color": "#090909",
-                  "size": "sm"
-                },
-                {
-                  "type": "text",
-                  "text": "西屯區-漢口路二段",
-                  "color": "#090909",
-                  "size": "sm"
-                }
-              ],
-              "spacing": "sm"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "text",
-                  "text": "NTD. 17900",
-                  "color": "#E60012",
-                  "size": "xl",
-                  "weight": "bold"
-                }
-              ],
-              "spacing": "sm",
-              "margin": "md"
-            },
-            {
-              "type": "box",
-              "layout": "vertical",
-              "contents": [
-                {
-                  "type": "button",
-                  "action": {
-                    "type": "uri",
-                    "label": "開啟",
-                    "uri": "http://linecorp.com/"
-                  }
-                }
-              ],
-              "margin": "md"
-            }
-          ]
-        }
-      ],
-      "paddingTop": "15px",
-      "paddingBottom": "10px",
-      "paddingStart": "20px",
-      "paddingEnd": "20px"
-    }
+              }
+            ],
+            "margin": "md"
+          }
+        ]
+      }
+    ],
+    "paddingTop": "15px",
+    "paddingBottom": "10px",
+    "paddingStart": "20px",
+    "paddingEnd": "20px"
+  }
 }
