@@ -11,6 +11,7 @@ type Options struct {
 	isNewList      string
 	Type           string
 	Region         string
+	City           string
 	Section        []string
 	SearchType     string
 	Other          []string
@@ -18,21 +19,30 @@ type Options struct {
 }
 
 func NewOptions(
-	Region string,
-	Section []string,
-	SearchType string,
-	Other []string,
-	RecomCommunity string,
+	region string,
+	section []string,
+	searchType string,
+	other []string,
+	recomCommunity string,
 ) (*Options, error) {
+	var city string
+	switch {
+	case region == "8":
+		city = "台中市"
+	default:
+		city = "台北市"
+	}
+
 	return &Options{
 		isFormatData:   "1",
 		isNewList:      "1",
 		Type:           "1",
-		Region:         Region,
-		Section:        Section,
-		SearchType:     SearchType,
-		Other:          Other,
-		RecomCommunity: RecomCommunity,
+		Region:         region,
+		City:           city,
+		Section:        section,
+		SearchType:     searchType,
+		Other:          other,
+		RecomCommunity: recomCommunity,
 	}, nil
 }
 
@@ -42,6 +52,7 @@ func DefaultOptions() *Options {
 		"1",
 		"1",
 		"8",
+		"台中市",
 		[]string{"104", "101", "100", "105"},
 		"1",
 		nil,

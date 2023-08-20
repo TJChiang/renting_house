@@ -3,8 +3,8 @@ package house591
 import (
 	"encoding/json"
 	"fmt"
-	"io"
 	"net/http"
+	"net/url"
 	"strings"
 
 	"github.com/gocolly/colly"
@@ -59,9 +59,6 @@ func (c *Crawler) FetchCsrfToken() (string, error) {
 	})
 
 	c.colly.OnResponse(func(r *colly.Response) {
-		for i, e := range r.Headers.Values("Set-Cookie") {
-			fmt.Println(i, e)
-		}
 		c.cookies = strings.Join(r.Headers.Values("Set-Cookie"), ";")
 	})
 
@@ -83,7 +80,12 @@ func (c *Crawler) FetchHouses(o *Options) (*HouseStructure, error) {
 		return nil, err
 	}
 	c.cookies = strings.Replace(c.cookies, "urlJumpIp=1", "urlJumpIp="+o.Region, 1)
-	c.cookies = strings.Replace(c.cookies, "urlJumpIpByTxt=%E5%8F%B0%E5%8C%97%E5%B8%82", "urlJumpIpByTxt=", 1)
+	c.cookies = strings.Replace(
+		c.cookies,
+		"urlJumpIpByTxt=%E5%8F%B0%E5%8C%97%E5%B8%82",
+		"urlJumpIpByTxt="+url.QueryEscape(o.City),
+		1,
+	)
 	req.Header.Add("Content-Type", "application/json")
 	req.Header.Add("Cookie", c.cookies)
 	req.Header.Add("X-CSRF-TOKEN", c.csrfToken)
@@ -95,14 +97,8 @@ func (c *Crawler) FetchHouses(o *Options) (*HouseStructure, error) {
 
 	defer res.Body.Close()
 
-	bodyBytes, err := io.ReadAll(res.Body)
-	if err != nil {
-		return nil, err
-	}
-
 	data := HouseStructure{}
-	json.Unmarshal(bodyBytes, &data)
 
-	// json.NewDecoder(res.Body).Decode(&data)
+	json.NewDecoder(res.Body).Decode(&data)
 	return &data, nil
 }
