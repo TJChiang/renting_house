@@ -7,7 +7,7 @@ import (
 )
 
 type LineMessage struct {
-	client *linebot.Client
+	Client *linebot.Client
 }
 
 func Init() (*LineMessage, error) {
@@ -20,6 +20,6 @@ func Init() (*LineMessage, error) {
 	}
 
 	return &LineMessage{
-		client: client,
+		Client: client,
 	}, nil
 }
