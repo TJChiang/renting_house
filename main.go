@@ -2,16 +2,19 @@ package main
 
 import (
 	"fmt"
+	"github.com/joho/godotenv"
 	"github.com/line/line-bot-sdk-go/v7/linebot"
 	"log"
+	"os"
 	"renting_house/internal/line_message"
+	"renting_house/services"
 	"renting_house/services/house591"
 	"strconv"
-
-	"github.com/joho/godotenv"
+	"time"
 )
 
 func main() {
+	// 載入 env
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatalln("Error loading .env file:", err)
@@ -38,138 +41,49 @@ func main() {
 		return
 	}
 
-	var flex *int
-	flex = new(int)
-	*flex = 1
-	k := 0
-	var bubbleContainerList []*linebot.BubbleContainer
-	for _, v := range data.Data.Data {
-		bubbleContainerList = append(bubbleContainerList, &linebot.BubbleContainer{
-			Type: linebot.FlexContainerTypeBubble,
-			Size: linebot.FlexBubbleSizeTypeKilo,
-			Header: &linebot.BoxComponent{
-				Type:       linebot.FlexComponentTypeBox,
-				Layout:     linebot.FlexBoxLayoutTypeHorizontal,
-				PaddingAll: "0px",
-				Contents: []linebot.FlexComponent{
-					&linebot.ImageComponent{
-						URL:         v.ImageList[0],
-						Size:        linebot.FlexImageSizeTypeFull,
-						AspectMode:  linebot.FlexImageAspectModeTypeCover,
-						AspectRatio: "150:196",
-						Gravity:     linebot.FlexComponentGravityTypeCenter,
-						Flex:        flex,
-					},
-					&linebot.BoxComponent{
-						Type:   linebot.FlexComponentTypeBox,
-						Layout: linebot.FlexBoxLayoutTypeVertical,
-						Flex:   flex,
-						Contents: []linebot.FlexComponent{
-							&linebot.ImageComponent{
-								URL:         v.ImageList[1],
-								Size:        linebot.FlexImageSizeTypeFull,
-								AspectMode:  linebot.FlexImageAspectModeTypeCover,
-								AspectRatio: "150:98",
-								Gravity:     linebot.FlexComponentGravityTypeCenter,
-							},
-							&linebot.ImageComponent{
-								URL:         v.ImageList[1],
-								Size:        linebot.FlexImageSizeTypeFull,
-								AspectMode:  linebot.FlexImageAspectModeTypeCover,
-								AspectRatio: "150:98",
-								Gravity:     linebot.FlexComponentGravityTypeCenter,
-							},
-						},
-					},
-				},
-			},
-			Body: &linebot.BoxComponent{
-				Type:          linebot.FlexComponentTypeBox,
-				Layout:        linebot.FlexBoxLayoutTypeVertical,
-				PaddingTop:    "15px",
-				PaddingBottom: "10px",
-				PaddingStart:  "20px",
-				PaddingEnd:    "20px",
-				Contents: []linebot.FlexComponent{
-					&linebot.BoxComponent{
-						Type:    linebot.FlexComponentTypeBox,
-						Layout:  linebot.FlexBoxLayoutTypeVertical,
-						Spacing: linebot.FlexComponentSpacingTypeSm,
-						Contents: []linebot.FlexComponent{
-							&linebot.TextComponent{
-								Type:   linebot.FlexComponentTypeText,
-								Size:   linebot.FlexTextSizeTypeLg,
-								Wrap:   true,
-								Text:   v.Title,
-								Color:  "#000000",
-								Weight: linebot.FlexTextWeightTypeBold,
-							},
-						},
-					},
-					&linebot.BoxComponent{
-						Type:    linebot.FlexComponentTypeBox,
-						Layout:  linebot.FlexBoxLayoutTypeVertical,
-						Spacing: linebot.FlexComponentSpacingTypeSm,
-						Margin:  linebot.FlexComponentMarginTypeMd,
-						Contents: []linebot.FlexComponent{
-							&linebot.TextComponent{
-								Type:  linebot.FlexComponentTypeText,
-								Size:  linebot.FlexTextSizeTypeSm,
-								Text:  v.KindName + " | " + v.Room + " | " + v.Area + "坪 | " + v.Floor,
-								Color: "#090909",
-							},
-							&linebot.TextComponent{
-								Type:  linebot.FlexComponentTypeText,
-								Size:  linebot.FlexTextSizeTypeSm,
-								Text:  v.SectionName + v.StreetName,
-								Color: "#090909",
-							},
-						},
-					},
-					&linebot.BoxComponent{
-						Type:    linebot.FlexComponentTypeBox,
-						Layout:  linebot.FlexBoxLayoutTypeVertical,
-						Spacing: linebot.FlexComponentSpacingTypeSm,
-						Margin:  linebot.FlexComponentMarginTypeMd,
-						Contents: []linebot.FlexComponent{
-							&linebot.TextComponent{
-								Type:   linebot.FlexComponentTypeText,
-								Size:   linebot.FlexTextSizeTypeLg,
-								Weight: linebot.FlexTextWeightTypeBold,
-								Text:   v.Price + " " + v.PriceUnit,
-								Color:  "#E60012",
-							},
-						},
-					},
-					&linebot.BoxComponent{
-						Type:   linebot.FlexComponentTypeBox,
-						Layout: linebot.FlexBoxLayoutTypeVertical,
-						Margin: linebot.FlexComponentMarginTypeMd,
-						Contents: []linebot.FlexComponent{
-							&linebot.ButtonComponent{
-								Type:   linebot.FlexComponentTypeButton,
-								Action: linebot.NewURIAction("開啟", "https://rent.591.com.tw/home/"+strconv.Itoa(v.PostId)),
-							},
-						},
-					},
-				},
-			},
-		})
-		k++
-		if k >= 12 {
-			break
-		}
-	}
-
-	contents := &linebot.CarouselContainer{
-		Type:     linebot.FlexContainerTypeCarousel,
-		Contents: bubbleContainerList,
-	}
-
-	res, err := bot.Client.BroadcastMessage(linebot.NewFlexMessage("carousel", contents)).Do()
+	carouselLimit, err := strconv.Atoi(os.Getenv("LINE_CAROUSEL_LIMIT"))
 	if err != nil {
 		log.Fatalln(err)
 		return
 	}
-	log.Println(res)
+
+	// 整理資料
+	bubbleList := make([]*linebot.BubbleContainer, 0, carouselLimit)
+	timezone, _ := time.LoadLocation("Asia/Taipei")
+	datetime := time.Now().In(timezone).Format("2006-02-01 15:04:05")
+	bot.Client.BroadcastMessage(linebot.NewTextMessage("[" + datetime + "] New house items.")).Do()
+	for _, v := range data.Data.Data {
+		log.Println("post id: ", v.PostId)
+		bubbleList = append(bubbleList, services.GetBubbleContainer(v))
+		// bubble container 滿了之後，放到 carousel container ，並清除
+		if len(bubbleList) >= carouselLimit {
+			// 發布租屋資料
+			res, err := broadcastMessage(bot.Client, bubbleList)
+			if err != nil {
+				log.Fatalln("Response: ", res)
+				log.Fatalln("Error: ", err)
+				return
+			}
+			bubbleList = bubbleList[:0]
+			time.Sleep(500 * time.Millisecond)
+		}
+	}
+
+	// 把 list 剩下的資料發布出去
+	if len(bubbleList) != 0 {
+		res, err := broadcastMessage(bot.Client, bubbleList)
+		if err != nil {
+			log.Fatalln("Response: ", res)
+			log.Fatalln("Error: ", err)
+			return
+		}
+		bubbleList = bubbleList[:0]
+	}
+}
+
+func broadcastMessage(bot *linebot.Client, bubbleList []*linebot.BubbleContainer) (*linebot.BasicResponse, error) {
+	return bot.BroadcastMessage(linebot.NewFlexMessage("carousel", &linebot.CarouselContainer{
+		Type:     linebot.FlexContainerTypeCarousel,
+		Contents: bubbleList,
+	})).Do()
 }
