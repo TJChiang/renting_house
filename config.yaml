@@ -1,0 +1,38 @@
+config:
+  591_options:
+    home_page: "https://rent.591.com.tw"
+    searching_url: "https://rent.591.com.tw/home/search/rsList"
+    house_item_url: "https://rent.591.com.tw/home/"
+    is_format_data: "1"
+    isNewList: "1"
+    type: "1"
+    # 8:台中市
+    region: "8"
+    # 100:南區 / 101:西區 / 104:西屯區 / 105:南屯區 / 109:烏日區
+    section:
+      - "100"
+      - "101"
+      - "104"
+      - "105"
+    city: "台中市"
+    searchType: "1"
+    # 1:整層住家 / 2:獨立套房 / 3:分租套房 / 4:雅房 / 8:車位 / 24:其他
+#    kind: 1
+#    other:
+#      - "newPost"
+#      - "pet"
+#      - "cook"
+#      - "carplace"
+#      - "balcony_1"
+#      - "lift" # 電梯
+#      - "near_subway"
+#      - "lease" # 短租
+    recomCommunity: "1"
+#    multiPrice:
+#      - "0_5000"
+#      - "5000_10000"
+#      - "10000_20000"
+  line:
+    access_token: ${LINE_ACCESS_TOKEN}
+    secret: ${LINE_SECRET}
+    carousel_limit: 12

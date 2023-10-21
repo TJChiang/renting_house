@@ -4,8 +4,10 @@ import (
 	"fmt"
 	"github.com/joho/godotenv"
 	"github.com/line/line-bot-sdk-go/v7/linebot"
+	"gopkg.in/yaml.v3"
 	"log"
 	"os"
+	"path/filepath"
 	"renting_house/internal/line_message"
 	"renting_house/services"
 	"renting_house/services/house591"
@@ -20,6 +22,18 @@ func main() {
 		log.Fatalln("Error loading .env file:", err)
 		return
 	}
+
+	filename, _ := filepath.Abs("./config.yaml")
+	yamlFile, err := os.ReadFile(filename)
+	var t map[string]interface{}
+	if err = yaml.Unmarshal(yamlFile, &t); err != nil {
+		log.Fatalln(err)
+		return
+	}
+
+	fmt.Println(t)
+	fmt.Println(string(yamlFile))
+	return
 
 	// 爬取資料
 	crawler, err := house591.Default()
